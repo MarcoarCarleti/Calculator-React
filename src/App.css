@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.calculator-grid {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 6.25rem);
+  grid-template-rows: minmax(7.5rem, auto) repeat(5, 6.25rem);
+  justify-content: center;
+}
+
+.calculator-grid > .number {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #eee;
+}
+
+.calculator-grid > button:hover {
+  background: #eee;
+  color: #111;
+}
+
+.operator {
+  background-color: #41b88375;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  color: #eee;
+  padding: auto;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  position: relative;
+}
+
+.output > .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output > .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
